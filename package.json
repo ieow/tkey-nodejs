@@ -1,0 +1,17 @@
+{
+  "name": "tkey-nodejs",
+  "version": "1.0.0",
+  "description": "tkey-nodejs example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tkey/core": "^12.0.0",
+    "@tkey/service-provider-sfa": "^11.0.0",
+    "@tkey/storage-layer-torus": "^12.0.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
