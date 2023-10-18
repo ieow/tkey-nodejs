@@ -15,6 +15,7 @@
     "@tkey/service-provider-torus": "^12.0.0",
     "@tkey/storage-layer-torus": "^12.0.0",
     "@toruslabs/torus.js": "^12.0.1",
+    "@web3auth/mpc-core-kit": "file:///Users/apollo/works/crypto/torus/clone26/mpc-core-kit/",
     "jsonwebtoken": "^8.5.1"
   }
 }
