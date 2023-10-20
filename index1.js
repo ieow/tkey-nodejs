@@ -32,7 +32,8 @@ let instance = new Web3AuthMPCCoreKit({
     web3AuthClientId: "torus-key-test",
     web3AuthNetwork: "sapphire_devnet",
     baseUrl: "https://localhost",
-    storageKey: "mock"
+    storageKey: "memory",
+    uxMode: "nodejs"
 });
 
 await instance.init({
