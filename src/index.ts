@@ -7,6 +7,7 @@ import { keccak256 } from "@toruslabs/torus.js";
 // import { sign, refreshTSSShares } from "./mpc-remote";
 import BN from "bn.js";
 import { generatePrivate } from "@toruslabs/eccrypto";
+import { SmsService, TssShareType, Web3AuthMPCCoreKit, parseToken } from "@web3auth/mpc-core-kit";
 
 
 const privateKey = "MEECAQAwEwYHKoZIzj0CAQYIKoZIzj0DAQcEJzAlAgEBBCCD7oLrcKae+jVZPGx52Cb/lKhdKxpXjl9eGNa1MlY57A==";
@@ -68,7 +69,7 @@ async function main () {
   })
   
   let smsInstance = new SmsService({
-    smsbackendUrl : "http://localhost:3021",
+    backendUrl : "http://localhost:3021",
     coreKitInstance: instance,
   })
 
@@ -86,7 +87,7 @@ async function main () {
     console.log(result)
     // verify sms
     // let verifiedResult = await smsInstance.verifySMSOTPRemote(description.key, result!);
-    let verifiedResult = await smsInstance.verifySMSOTPRemote(address, result!);
+    let verifiedResult = await smsInstance.verifyRemoteSetup(address, result!);
     await instance.setupRemoteClient(verifiedResult);
 
     // let shareStore = await instance.tKey.storageLayer.getMetadata({privKey: mockPkeyfromDatabase});
